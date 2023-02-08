@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  /* font-family: arial; */
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("images/milad-fakurian-bexwsdM5BCw-unsplash\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-position: 0 30%;
+}
+/* nav style */
+
+.header {
+  padding: 30px 30px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title > h1 {
+  font-family: "Merriweather";
+  font-weight: 900;
+}
+
+.nav-list {
+  margin-left: 30px;
+}
+
+.nav-list > ul {
+  display: inline-flex;
+}
+
+.nav-list > ul > li > a {
+  color: #ffff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #8d64ff;
+}
+
+.main {
+  /* display: flex; */
+  padding: 80px 50px;
+  width: 100%;
+  /* justify-content: space-evenly; */
+}
+
+.heading {
+  padding: 20px 40px;
+  width: 50%;
+}
+
+.header-title {
+  /* margin-top: 50px; */
+  color: #000000;
+  font-family: "Montserrat";
+  font-size: 5rem;
+}
+
+.parag {
+  margin-top: 90px;
+  font-size: 1.5rem;
+  color: #ffff;
+}
+
+.input {
+  width: 50%;
+}
+
+.wcard {
+  background-image: url("images/5102543_2639782.jpg");
+  background-color: #8d64ff;
+  background-size: cover;
+  background-position: 0 25px;
+  /* background-repeat: no-repeat; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120%;
+  width: 70%;
+  border-radius: 15px;
+  margin-left: 100px;
+}
+
+.wcard-header {
+  text-align: center;
+  /* margin-bottom: 50px; */
+  padding: 20px;
+}
+
+.wcard-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.temp {
+  font-size: 4rem;
+}
+
+.wdescription {
+  text-align: left;
+  padding: 0;
+}
+
+.wicon {
+  height: 70px;
+}
