@@ -50,18 +50,18 @@
       <div class="weather-card col-lg-6">
         <div class="wcard">
           <div class="wcard-header">
-            <h1 class="name">Tetouan</h1>
-            <p class="date">Saturday, Feb 8</p>
+            <h1 class="name"><%= name %></h1>
+            <p class="date"><%= date %> </p>
           </div>
           <div class="wcard-body">
-            <h1 class="temp">12°C</h1>
+            <h1 class="temp"><%= temp %> °C</h1>
             <ul class="wdescription">
-              <li><img class="wicon" src="https://openweathermap.org/img/wn/01n@2x.png" alt=""></li>
+              <li><img class="wicon" src="https://openweathermap.org/img/wn/<%=icon%>@2x.png" alt=""></li>
               <li>
-                <p>Sunny</p>
+                <p><%= description %> </p>
               </li>
               <li>
-                <p>H:12° L:6°</p>
+                <p>H:<%= max %> ° L:<%= min %> °</p>
               </li>
             </ul>
           </div>
