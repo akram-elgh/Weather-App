@@ -86,7 +86,7 @@ body {
   /* background-image: url("images/5102543_2639782.jpg"); */
   background-color: rgb(255 175 175 / 50%);
   background-size: cover;
-  background-position: 0 25px;
+  /* background-position: 0 25px; */
   /* background-repeat: no-repeat; */
   display: flex;
   flex-direction: column;
@@ -95,6 +95,7 @@ body {
   width: 70%;
   border-radius: 15px;
   margin-left: 100px;
+  /* color: #ffff; */
 }
 
 .wcard-header {
@@ -103,10 +104,15 @@ body {
   padding: 20px;
 }
 
+h1.name {
+  font-size: 4rem;
+}
+
 .wcard-body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: #ffff;
 }
 
 .temp {
@@ -116,7 +122,9 @@ body {
 
 .wdescription {
   text-align: left;
-  padding: 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
 }
 
 .wicon {

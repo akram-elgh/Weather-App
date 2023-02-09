@@ -27,6 +27,13 @@ app.get("/", (req, res) => {
         const min = Math.floor(object.main.temp_min);
         const icon = object.weather[0].icon;
         const description = object.weather[0].description;
+        if (icon.includes("d")) {
+          var time = "day";
+          var color = "black";
+        } else {
+          var time = "night";
+          var color = "white";
+        }
         res.render("index", {
           name: city,
           temp: temp,
@@ -35,6 +42,8 @@ app.get("/", (req, res) => {
           icon: icon,
           description: description,
           date: date,
+          time: time,
+          color: color,
         });
       } else {
         city = "Tetouan";
