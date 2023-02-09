@@ -15,14 +15,12 @@ var object = {};
 const time = new Date();
 const date = time.toDateString().slice(0, 10);
 
-console.log(process.env.API_KEY);
+// Default city is Tetouan
 app.get("/", (req, res) => {
   url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=${units}`;
-  console.log(url);
   https.get(url, (response) => {
     response.on("data", (data) => {
       object = JSON.parse(data);
-      console.log(object);
       if (object.cod == 200) {
         const temp = Math.floor(object.main.temp);
         const max = Math.floor(object.main.temp_max);
