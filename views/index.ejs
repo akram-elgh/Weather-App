@@ -37,7 +37,7 @@
     <div class="main row">
       <div class="heading col-lg-6">
         <h1 class="header-title">Welcome to the Weather App</h1>
-        <p class="parag">Explore the current weather in diffrent cities around the globe</p>
+        <p class="parag">Explore the current weather in different cities around the globe</p>
         <form action="/" method="post">
           <div class="mb-3">
             <!-- <label for="" class="form-label">Enter a city name</label> -->
@@ -49,9 +49,10 @@
       </div>
       <div class="weather-card col-lg-6">
         <div class="wcard" style="background-image: url(' images/<%=time%>.jpg');">
-          <div class="wcard-header" style="color:'<%color%>'">
+          <div class="wcard-header" style="color: <%=color%>;">
             <h1 class="name"><%= name %></h1>
             <p class="date"><%= date %> </p>
+            <p class="current" id="time"></p>
           </div>
           <div class="wcard-body">
             <h1 class="temp"><%= temp %> °C</h1>
@@ -72,7 +73,33 @@
   </main>
   <footer>
     <p>Made by <a href="https://github.com/akram-elgh">Akram-elgh</a></p>
+    <p class="current-time" style="display: none;"><%= offset %></p>
   </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    function getTime() {
+      var offset = $(".current-time").text();
+      // create Date object for current location
+      var d = new Date();
+      console.log(d.getTime());
+
+      // convert to msec
+      // subtract local time zone offset
+      // get UTC time in msec
+      var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+      console.log(utc);
+      // create new Date object for different city
+      // using supplied offset
+      var nd = new Date(utc + (1000 * offset));
+      console.log(nd);
+      // return time as a string
+      console.log(nd.toLocaleString());
+      $("#time").text(nd.toLocaleString().slice(11));
+    }
+    setInterval(getTime, 1000);
+  })
+</script>
 
 </html>
