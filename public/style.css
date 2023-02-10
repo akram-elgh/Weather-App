@@ -62,7 +62,6 @@ body {
 
 .heading {
   padding: 20px 40px;
-  width: 50%;
 }
 
 .header-title {
@@ -91,8 +90,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 120%;
-  width: 70%;
+  height: 130%;
+  width: 50%;
   border-radius: 15px;
   margin-left: 100px;
   /* color: #ffff; */
